@@ -1,64 +1,58 @@
-import logo from "./logo.svg";
-
-import ExpenseItem from "./components/ExpenseItem";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
 function App() {
-  const expense = [
+  const expenses = [
     {
       id: "e1",
-      title: "Toilet Paper",
+      title: "To-Let Board",
       amount: 94.12,
       date: new Date(2020, 7, 14),
-      location: "Mumbai",
+      location : 'Bangaluru',
+
     },
-    { id: "e2", 
-    title: "Meeting With Kangna Ranaut",
-     amount: 79999.49, 
-     date: new Date(2021, 2, 12),
-    location:"Andheri", },
+    { id: "e2",
+     title: "Meeting with Kangna Ranaut",
+      amount: 79999.49, 
+      date: new Date(2021, 2, 12), 
+      location : 'Andheri',
+  },
     {
       id: "e3",
-      title: "MahaRaja + French Fries",
+      title: "Car Insurance",
       amount: 294.67,
       date: new Date(2021, 2, 28),
-      location: "Cnaught Place Delhi",
+      location : 'Delhi',
+
     },
     {
       id: "e4",
-      title: "Extra Large Bucket",
+      title: "KFC",
       amount: 450,
       date: new Date(2021, 5, 12),
-      location: "KFC",
+      location : 'Cnaught Place Delhi',
+    },
+    {
+      id: "e5",
+      title: "Old Monk",
+      amount: 7590,
+      date: new Date(2021, 8, 12),
+      location : 'Indore',
     },
   ];
+
+
   return (
     <div>
-      <h2>Let's get started !</h2>
+      <h2>Let's get started!</h2>
+      {expenses.map((expense) => (
       <ExpenseItem
-        title={expense[0].title}
-        amount={expense[0].amount}
-        date={expense[0].date}
-        locationOfExpenditure={expense[0].location}
+      title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
+          location={expense.location}
       />
-      <ExpenseItem
-        title={expense[1].title}
-        amount={expense[1].amount}
-        date={expense[1].date}
-        locationOfExpenditure={expense[1].location}
-        />
-      <ExpenseItem
-        title={expense[2].title}
-        amount={expense[2].amount}
-        date={expense[2].date}
-        locationOfExpenditure={expense[2].location}
-        />
-      <ExpenseItem
-        title={expense[3].title}
-        amount={expense[3].amount}
-        date={expense[3].date}
-        locationOfExpenditure={expense[3].location}
-        />
+      ))}
     </div>
-    );
-  
+  );
 }
+
 export default App;
