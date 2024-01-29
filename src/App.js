@@ -3,8 +3,8 @@ function App() {
   const expenses = [
     {
       id: "e1",
-      title: "To-Let Board",
-      amount: 94.12,
+      title: "To Let Board Cost",
+      amount: 'Free',
       date: new Date(2020, 7, 14),
       location : 'Bangaluru',
 
