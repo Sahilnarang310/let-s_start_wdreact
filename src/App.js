@@ -40,10 +40,14 @@ function App() {
     },
   ];
 
+  const addExpenseHandler=expense=>{
+    console.log(addExpenseHandler);
+    console.log(expense)
+  }
 
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler}/>
       {/* <expenses items={expenses}/> */}
       {expenses.map((expense) => (
       <ExpenseItem
@@ -56,11 +60,11 @@ function App() {
     </div>
   );
   // return (
-  //   <div>
-  //     <NewExpense/>
-  //     <expense itme = {expenses} />
-      
-  //   </div>
+    // <div>
+      // <NewExpense onAddExpense={addExpenseHandler}/>
+      // { <expense ietm = {expenses} /> */}
+  // <ExpenseItem />
+    // </div>
   // )
 }
 
