@@ -9,7 +9,7 @@ function Card(props) {
   )
 }
 
-export default Card
+export default Card;
 
 // The Advantage of the card element here is that playing an important role,
 //  It is combining all the components and extracting the duplication of the Css,
